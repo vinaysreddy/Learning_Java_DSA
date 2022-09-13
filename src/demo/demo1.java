@@ -4,80 +4,45 @@ import java.util.Arrays;
 
 public class demo1 {
     public static void main(String[] args) {
-        int[][] arr = {
-                {1, 2, 3},
-                {4, 5, 6},
-                {7, 8, 9}
-        };
-        System.out.println(Arrays.toString(search(arr, 1)));
+
+        int[] arr = {2, 1, 5, 4, 3};
+        bubbleSort(arr);
+        System.out.println(Arrays.toString(arr));
+
     }
 
-    // search in the row provided between the cols provided
-    static int[] binarySearch(int[][] matrix, int row, int cStart, int cEnd, int target) {
-        while (cStart <= cEnd) {
-            int mid = cStart + (cEnd - cStart) / 2;
-            if (matrix[row][mid] == target) {
-                return new int[]{row, mid};
+    static void bubbleSort(int[] arr) {
+        //run the steps n-1 times
+        boolean swap;
+        for (int i = 0; i < arr.length; i++) {
+            //for each step max item will come at end of respective index
+            swap = false;
+            for (int j = 1; j < arr.length - i; j++) {
+                //compare: do swap
+                if (arr[j] < arr[j - 1]) {
+                    swap(arr, j);
+                    swap = true;
+                }
             }
-            if (matrix[row][mid] < target) {
-                cStart = mid + 1;
-            } else {
-                cEnd = mid - 1;
+            //if u didnot swap for particular value of i,it means arr is sorted hence stop the program
+            if (!swap) {
+                break;
             }
-        }
-        return new int[]{-1, -1};
-    }
 
-    static int[] search(int[][] matrix, int target) {
-        int rows = matrix.length;
-        int cols = matrix[0].length; // be cautious, matrix may be empty
-        if (cols == 0) {
-            return new int[]{-1, -1};
-        }
-        if (rows == 1) {
-            return binarySearch(matrix, 0, 0, cols - 1, target);
-        }
-
-        int rStart = 0;
-        int rEnd = rows - 1;
-        int cMid = cols / 2;
-
-        // run the loop till 2 rows are remaining
-        while (rStart < (rEnd - 1)) { // while this is true it will have more than 2 rows
-            int mid = rStart + (rEnd - rStart) / 2;
-            if (matrix[mid][cMid] == target) {
-                return new int[]{mid, cMid};
-            }
-            if (matrix[mid][cMid] < target) {
-                rStart = mid;
-            } else {
-                rEnd = mid;
-            }
-        }
-
-        // now we have two rows
-        // check whether the target is in the col of 2 rows
-        if (matrix[rStart][cMid] == target) {
-            return new int[]{rStart, cMid};
-        }
-        if (matrix[rStart + 1][cMid] == target) {
-            return new int[]{rStart + 1, cMid};
-        }
-
-        // search in 1st half
-        if (target <= matrix[rStart][cMid - 1]) {
-            return binarySearch(matrix, rStart, 0, cMid - 1, target);
-        }
-        // search in 2nd half
-        if (target >= matrix[rStart][cMid + 1] && target <= matrix[rStart][cols - 1]) {
-            return binarySearch(matrix, rStart, cMid + 1, cols - 1, target);
-        }
-        // search in 3rd half
-        if (target <= matrix[rStart + 1][cMid - 1]) {
-            return binarySearch(matrix, rStart + 1, 0, cMid - 1, target);
-        } else {
-            return binarySearch(matrix, rStart + 1, cMid + 1, cols - 1, target);
         }
     }
 
+    static void swap(int[] arr, int j) {
+        /*
+        --swap with temp--
+        int temp = arr[j];
+        arr[j] = arr[j - 1];
+        arr[j - 1] = temp;
+        */
+
+        //swap without temp
+        arr[j] = arr[j] + arr[j - 1];
+        arr[j - 1] = arr[j] - arr[j - 1];
+        arr[j] = arr[j] - arr[j - 1];
+    }
 }
