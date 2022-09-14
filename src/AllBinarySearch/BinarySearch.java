@@ -29,3 +29,13 @@ public class BinarySearch {
         return -1;
     }
 }
+/*
+   Problems:
+  -> https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
+  -> leetcode.com/problems/find-smallest-letter-greater-than-target/
+  -> https://leetcode.com/problems/peak-index-in-a-mountain-array/
+  -> https://www.geeksforgeeks.org/find-position-element-sorted-array-infinite-numbers/
+  -> leetcode.com/problems/find-in-mountain-array/
+  -> https://leetcode.com/problems/search-in-rotated-sorted-array/
+ */
+
