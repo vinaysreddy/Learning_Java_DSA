@@ -1,4 +1,4 @@
-package AllBinarySearch;
+package BinarySearch_0_to_Hero;
 
 // https://www.geeksforgeeks.org/find-position-element-sorted-array-infinite-numbers/
 

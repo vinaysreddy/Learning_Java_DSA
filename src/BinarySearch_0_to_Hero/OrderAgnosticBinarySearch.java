@@ -1,4 +1,4 @@
-package AllBinarySearch;
+package BinarySearch_0_to_Hero;
 
 public class OrderAgnosticBinarySearch {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package AllBinarySearch;
+package BinarySearch_0_to_Hero;
 
 import java.util.Arrays;
 

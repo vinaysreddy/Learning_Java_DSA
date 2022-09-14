@@ -1,4 +1,4 @@
-package AllBinarySearch;
+package BinarySearch_0_to_Hero;
 //leetcode.com/problems/find-in-mountain-array/
 public class SearchInMountainArray {
     public static void main(String[] args) {

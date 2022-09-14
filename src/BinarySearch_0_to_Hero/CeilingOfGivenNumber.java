@@ -1,4 +1,4 @@
-package AllBinarySearch;
+package BinarySearch_0_to_Hero;
 
 //Ceiling means smallest number >=target
 public class CeilingOfGivenNumber {

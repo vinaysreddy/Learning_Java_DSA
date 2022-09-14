@@ -1,4 +1,4 @@
-package AllBinarySearch;
+package BinarySearch_0_to_Hero;
 
 //https://leetcode.com/problems/peak-index-in-a-mountain-array/
 public class PeakElementInMountainArray {
