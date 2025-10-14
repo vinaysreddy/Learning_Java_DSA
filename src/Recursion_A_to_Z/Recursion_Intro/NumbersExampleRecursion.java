@@ -1,4 +1,4 @@
-package Recursion_Intro;
+package Recursion_A_to_Z.Recursion_Intro;
 
 public class NumbersExampleRecursion {
     //write a function that takes in a number and print it
