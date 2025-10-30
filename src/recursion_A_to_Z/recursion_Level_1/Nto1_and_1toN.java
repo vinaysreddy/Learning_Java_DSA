@@ -1,4 +1,4 @@
-package Recursion_A_to_Z.Recursion_Level_1;
+package recursion_A_to_Z.recursion_Level_1;
 
 public class Nto1_and_1toN {
     public static void main(String[] args) {

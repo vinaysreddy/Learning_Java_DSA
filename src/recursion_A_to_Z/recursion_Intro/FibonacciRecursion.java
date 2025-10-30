@@ -1,4 +1,4 @@
-package Recursion_A_to_Z.Recursion_Intro;
+package recursion_A_to_Z.recursion_Intro;
 
 public class FibonacciRecursion {
     public static void main(String[] args) {
